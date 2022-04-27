@@ -4,10 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Cases {
-    public Cases(Map<String, String> points_aux, int mathches_aux) {
-        Map<String, String> points = points_aux;
-        String[] teams = points.values().toArray(new String[0]);
-        int matches = mathches_aux;
-        int teamsQty = teams.length;
+    Map<String, Integer> points;
+    String[] teams;
+    String[][] matches;
+    int matchesQty;
+    int teamsQty;
+
+    public Cases(Map<String, Integer> points_aux, String[][] matches_aux) {
+        points = points_aux;
+        teams = points.keySet().toArray(new String[0]);
+        matches = matches_aux;
+        matchesQty = matches.length;
+        teamsQty = teams.length;
     }
 }
