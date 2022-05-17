@@ -4,7 +4,7 @@ import Main.Cases;
 
 import java.util.Map;
 
-public class DismissLosers{
+public class DismissLosers implements  Strategy{
     public void solv(Cases cases) {
         for (Map.Entry<String, Integer> entry: cases.points.entrySet()){
             if (entry.getValue() == 0){
