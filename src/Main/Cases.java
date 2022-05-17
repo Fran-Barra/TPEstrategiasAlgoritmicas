@@ -6,6 +6,7 @@ public class Cases {
     public Map<String, Integer> points;
     public String[] teams;
     public String[][] matches;
+    public int[] results;
     public int matchesQty;
     public int teamsQty;
 
@@ -15,5 +16,6 @@ public class Cases {
         matches = matches_aux;
         matchesQty = matches.length;
         teamsQty = teams.length;
+        results = new int[matchesQty];
     }
 }
