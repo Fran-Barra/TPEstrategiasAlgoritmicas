@@ -3,11 +3,11 @@ package Main;
 import java.util.Map;
 
 public class Cases {
-    Map<String, Integer> points;
-    String[] teams;
-    String[][] matches;
-    int matchesQty;
-    int teamsQty;
+    public Map<String, Integer> points;
+    public String[] teams;
+    public String[][] matches;
+    public int matchesQty;
+    public int teamsQty;
 
     public Cases(Map<String, Integer> points_aux, String[][] matches_aux) {
         points = points_aux;
