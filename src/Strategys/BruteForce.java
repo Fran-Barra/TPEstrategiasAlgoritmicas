@@ -8,23 +8,17 @@ import java.util.Map;
 public class BruteForce implements Strategy{
     @Override
     public void solv(Cases cases) {
-        boolean notFound = true;
-        while (notFound){
-            for (int i = 0; i <=3; i++) {
-                cases.results[cases.matchesQty - 1] = i;
-                if (i == 3) {
-                    for (int j = cases.matchesQty - 1; j > 0; j--) {
-                        if (cases.results[j] == 3) {
-                            cases.results[j - 1]++;
-                            cases.results[j] = 0;
-                        }
-                    }
-                }
-                if (check(cases)) {
-                    notFound = false;
-                    break;
-                }
-            }
+        while (!check(cases))
+            add(cases.results, cases.matchesQty-1);
+    }
+
+    private void add(int[] results, int i){
+        if (results[i] == 2){
+            results[i] = 0;
+            add(results, i-1);
+        }
+        else {
+            results[i]++;
         }
     }
 
