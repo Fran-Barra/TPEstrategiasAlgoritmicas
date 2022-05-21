@@ -11,23 +11,6 @@ public class Backtracking /*implements Strategy*/{
 //    Map<String, Integer> check_points = new HashMap<>();
 //    @Override
     public boolean solv(Cases cases, int n, Map<String, Integer> points) {
-//        if (n == cases.results.length)
-//            return;
-//        if (cases.results[n] > 2){
-//            cases.results[n] = 0;
-//            cases.results[n-1] += 1;
-//            solv(cases, --n, new HashMap<>(points));
-//        }
-//        else{
-//            Map<String, Integer> check_points = new HashMap<>(points);
-//            if (check(cases, n, check_points)){
-//                solv(cases, ++n, new HashMap<>(check_points));
-//            }
-//            else {
-//                cases.results[n]++;
-//                solv(cases, n, new HashMap<>(points));
-//            }
-//        }
         if (n < cases.matchesQty) {
             for (int i = 0; i <=2; i++){
                 cases.results[n] = i;
